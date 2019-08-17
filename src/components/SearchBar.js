@@ -4,10 +4,10 @@ class SearchBar extends React.Component {
   state = { term: "Hi There" };
 
   // the page wont refresh everytime you press enter inside the SearchBar
-  onFormSubmit(event) {
+  onFormSubmit = event => {
     event.preventDefault();
     console.log(this.state.term);
-  }
+  };
 
   render() {
     return (
