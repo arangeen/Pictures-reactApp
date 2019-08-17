@@ -1,9 +1,7 @@
 import React from "react";
 
 class SearchBar extends React.Component {
-  onInputChange(event) {
-    console.log(event.target.value);
-  }
+  state = { term: "" };
 
   render() {
     return (
@@ -13,7 +11,8 @@ class SearchBar extends React.Component {
             <label>Image Search</label>
             <input
               type="text"
-              onChange={event => console.log(event.target.value)}
+              value={this.state.term}
+              onChange={e => this.setState({ term: e.target.value })}
             />
           </div>
         </form>
