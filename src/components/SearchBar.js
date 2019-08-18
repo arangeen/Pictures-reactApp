@@ -1,7 +1,7 @@
 import React from "react";
 
 class SearchBar extends React.Component {
-  state = { term: "Hi There" };
+  state = { term: "" };
 
   // the page wont refresh everytime you press enter inside the SearchBar
   onFormSubmit = event => {
